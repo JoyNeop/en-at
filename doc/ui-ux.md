@@ -1,5 +1,7 @@
 # UI/UX Documentation
 
+Do not trust this documentation until this line of notice is removed. The product is receiving updates rapidly, therefore don't trust this documentation.
+
 ## Index
 
 The index page is a list of dictionaries that can be used. We may or may not split a study field into introduction and advanced.

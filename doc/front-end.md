@@ -1,5 +1,7 @@
 # Front-end Documentation
 
+Do not trust this documentation until this line of notice is removed. The product is receiving updates rapidly, therefore don't trust this documentation.
+
 ## Download a dictionary
 
 ```JavaScript
