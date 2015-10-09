@@ -32,13 +32,19 @@
 .enat-dict-entry-card {
     background: #FBFBFB;
     border-radius: 3px;
-    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
+    box-shadow: rgba(0, 0, 0, 0.094) 0 1px 1px;
     overflow: hidden;
+    position: relative;
+    -webkit-transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    transition: all 300ms ease;
 }
 
 .enat-dict-entry-card:hover {
-    color: #000;
-    background: #FFF;
+    /*color: #000;*/
+    /*background: #FFF;*/
+    box-shadow: rgba(0, 0, 0, 0.105) 0 5px 5px;
+    top: -5px;
 }
 
 .enat-dict-entry-card-anchor {
@@ -73,6 +79,8 @@
     color: #999;
     float: right;
     -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    transform: translateY(2px);
 }
 
 /* -------------------------------------------------- */
@@ -82,6 +90,7 @@
     font-weight: 300;
     color: #777;
     background: #FAFAFA;
+    border-top: solid 1px rgba(0, 0, 0, 0.02);
     padding: 40px 0 25px;
 }
 
@@ -89,5 +98,7 @@
     display: inline-block;
     height: 1.6rem;
     -webkit-transform: translateY(-2px);
+    -moz-transform: translateY(-2px);
+    transform: translateY(-2px);
     margin: 0 0 0 8px;
 }
