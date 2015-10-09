@@ -1,7 +1,8 @@
 .enat-site-grand-header {
+    text-shadow: rgba(0, 0, 0, 0.0983) 0 1px 0;
     background: #19F;
     background-image: -webkit-linear-gradient(280deg, #1C74F5, #1AC6FD);
-    padding: 50px 0;
+    padding: 60px 0 40px;
 }
 
 .enat-site-header-h1, .enat-site-header-h2 {
@@ -21,7 +22,7 @@
 /* -------------------------------------------------- */
 
 .enat-site-major-section {
-    padding: 50px 0;
+    padding: 60px 0 30px;
 }
 
 .enat-dict-entry-card-placeholder {
@@ -33,6 +34,11 @@
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
     overflow: hidden;
+}
+
+.enat-dict-entry-card:hover {
+    color: #000;
+    background: #FFF;
 }
 
 .enat-dict-entry-card-anchor {
@@ -75,4 +81,13 @@
     font-size: 1.4rem;
     font-weight: 300;
     color: #777;
+    background: #FAFAFA;
+    padding: 40px 0 25px;
+}
+
+.enat-site-grand-footer .sponsor-logo {
+    display: inline-block;
+    height: 1.6rem;
+    -webkit-transform: translateY(-2px);
+    margin: 0 0 0 8px;
 }

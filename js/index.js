@@ -1,8 +1,10 @@
 enat.listOfDicts = [
-    { id: 'test', title: 'Test', count: 10, style: 'background-color: #19F;' },
-    { id: 'test', title: 'Math', count: 8, style: 'background-color: #F26;' },
+    { id: 'test', title: 'Linguistics', count: 10, style: 'background-color: #19F;' },
     { id: 'test', title: 'Philosophy', count: 4, style: 'background-color: #1E6;' },
-    { id: 'test', title: 'Computer', count: 16, style: 'background-color: #777;' }
+    { id: 'test', title: 'Math', count: 5, style: 'background-color: #FF5E3A;' },
+    { id: 'test', title: 'Physics', count: 2, style: 'background-color: #4C55A6;' },
+    { id: 'test', title: 'Chemistry', count: 8, style: 'background-color: #777;' },
+    { id: 'test', title: 'Psychology', count: 16, style: 'background-color: #F26;' }
 ];
 
 enat.createCardsIntoIndex = function (msg) {

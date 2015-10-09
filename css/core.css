@@ -8,6 +8,10 @@ a {
     color: #08C;
 }
 
+a, a:hover {
+    text-decoration: none;
+}
+
 html, body {
     font-family: 'Myriad Pro', Seravek, 'Segoe UI', 'Helvetica Neue', Helvetica, 'Arial', 'Hiraigno Sans GB', 'Lantinghei SC', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
     font-size: 10px;
