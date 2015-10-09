@@ -1,0 +1,78 @@
+.enat-site-grand-header {
+    background: #19F;
+    background-image: -webkit-linear-gradient(280deg, #1C74F5, #1AC6FD);
+    padding: 50px 0;
+}
+
+.enat-site-header-h1, .enat-site-header-h2 {
+    color: #FFF;
+}
+
+.enat-site-header-h1 {
+    font-size: 4.50rem;
+    font-weight: 600;
+}
+
+.enat-site-header-h2 {
+    font-size: 2.00rem;
+    font-weight: 300;
+}
+
+/* -------------------------------------------------- */
+
+.enat-site-major-section {
+    padding: 50px 0;
+}
+
+.enat-dict-entry-card-placeholder {
+    margin: 0 0 30px;
+}
+
+.enat-dict-entry-card {
+    background: #FBFBFB;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0 1px 2px;
+    overflow: hidden;
+}
+
+.enat-dict-entry-card-anchor {
+    text-decoration: none;
+    display: block;
+}
+
+.enat-dict-entry-card-anchor *, .enat-dict-entry-card-anchor:hover * {
+    text-decoration: none !important;
+}
+
+.enat-dict-entry-card-vertical-area-1 {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    height: 140px;
+}
+
+.enat-dict-entry-card-vertical-area-2 {
+    padding: 16px 16px 12px;
+}
+
+.enat-dict-entry-card-vertical-area-2 h4 {
+    font-size: 2.2rem;
+    color: #333;
+    text-decoration: none !important;
+    margin: 0;
+}
+
+.enat-dict-entry-card-vertical-area-2 footer {
+    font-size: 1.4rem;
+    color: #999;
+    float: right;
+    -webkit-transform: translateY(2px);
+}
+
+/* -------------------------------------------------- */
+
+.enat-site-grand-footer {
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #777;
+}
