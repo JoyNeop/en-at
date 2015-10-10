@@ -15,43 +15,84 @@ enat.getCurrentDictInfoFromUrl = function () {
     } else {
         return null;
     };
-    console.log(33, tmp);
     var res = $.grep(enat.listOfDicts, function (n) {
         return n.id == tmp;
     });
-    console.log(555, res[0]);
     return res.length > 0 ? res[0] : null;
 };
 
-enat.initDictView = function (MSG) {
-    enat.runtime.currentProgress = 0;
-
-};
-
-enat.randomlySelectSomeElementsFromArray = function (total, arr) {
-
+enat.randomlySelectSomeElementsFromArray = function (arr) {
+    var tmp = [];
+    var res = [];
+    // var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
+    // var total = 10;
+    var total = enat.config.wordsPerSession;
+    while (tmp.length < total) {
+        var i = Math.floor(Math.random()*total);
+        if ($.grep(tmp, function(item){
+            return item == i;
+        })) {
+            tmp.push(i);
+            res.push(arr[i]);
+            console.log(arr[i].t);
+        };
+    };
+    return res;
 };
 
 enat.didReceiveDictDataFromServer = function (e) {
     var responseJSON = JSON.parse( e.target.responseText );
-    console.log(responseJSON)
+    enat.runtime.currentSessionVocabulary = enat.randomlySelectSomeElementsFromArray(responseJSON.list);
+    enat.setPhrase(0);
 };
 
 enat.getCurrentSessionProgress = function () {
-    return enat.runtime.currentProgress;
+    return enat.runtime.currentSessionProgress;
+};
+
+enat.setCurrentSessionProgress = function (p) {
+    enat.runtime.currentSessionProgress = p;
+
+    document.getElementById('session-progress-bar-progress').style.width = ((enat.runtime.currentSessionProgress+1) / enat.config.wordsPerSession * 100) + '%';
 };
 
 enat.userDidClickStartSessionButton = function () {
-
+    document.body.setAttribute('data-enat-session-state', 'session');
 };
 
-enat.userDidClickNextButton = function () {};
+enat.setPhrase = function (ph) {
+    var currentPhraseItem = enat.runtime.currentSessionVocabulary[ph];
+    var currentPhrase;
+    if (currentPhraseItem.w == 1) {
+        currentPhrase = '<a class="phrase-anchor" href="https://wikipedia.org/wiki/_P_" target="_blank">_P_</a>'.replace(/_P_/g, currentPhraseItem.t);
+    } else {
+        currentPhrase = currentPhraseItem.t;
+    };
+    document.getElementById('current-phrase').innerHTML = currentPhrase;
+    document.getElementById('current-explanation').innerHTML = currentPhraseItem.e;
+};
+
+enat.userDidClickNextButton = function () {
+    var currentSessionProgress = enat.getCurrentSessionProgress();
+    if (currentSessionProgress < enat.config.wordsPerSession-1) {
+        var currentPhraseItem = enat.runtime.currentSessionVocabulary[enat.getCurrentSessionProgress()];
+        enat.setPhrase(currentSessionProgress+1);
+        enat.setCurrentSessionProgress(currentSessionProgress+1);
+        if (currentSessionProgress == enat.config.wordsPerSession-2) {
+            document.getElementById('btn-next').innerHTML = 'Finish';
+            document.getElementById('btn-next').classList.remove('btn-primary');
+            document.getElementById('btn-next').classList.add('btn-success');
+        }
+    } else if (currentSessionProgress == enat.config.wordsPerSession-1) {
+        enat.userDidFinishSession();
+    };
+};
 
 enat.userDidChangeTranslationDisplayModePreference = function () {};
 
-enat.userDidStartLearningSession = function () {};
-
-enat.userDidFinishSession = function () {};
+enat.userDidFinishSession = function () {
+    document.body.setAttribute('data-enat-session-state', 'end');
+};
 
 (function(){
     // Initialize welcome screen
@@ -59,12 +100,31 @@ enat.userDidFinishSession = function () {};
         enat.dictNotFound();
     } else {
         document.getElementById('enat-dict-header').style.backgroundColor = enat.getCurrentDictInfoFromUrl().color;
+        document.getElementById('session-progress-bar-progress').style.backgroundColor = enat.getCurrentDictInfoFromUrl().color;
         document.getElementById('enat-dictionary-title-text').innerHTML = enat.getCurrentDictInfoFromUrl().title;
         enat.request('./dict.json', enat.didReceiveDictDataFromServer);
+        enat.setCurrentSessionProgress(0);
+
+        if (window.innerWidth < 770) {
+            // Assuming it is iOS or another mobile device which may have bug for fixed viewport height
+            document.ontouchmove = function (e) {
+                e.preventDefault();
+            }
+        };
     };
 
     (function(){
         // Initialize event listeners
+        document.getElementById('btn-start-session').addEventListener('click', enat.userDidClickStartSessionButton);
+        document.getElementById('btn-next').addEventListener('click', enat.userDidClickNextButton);
+        document.getElementById('btn-restart').addEventListener('click', function () {
+            document.body.setAttribute('data-enat-session-state', 'welcome');
+            enat.request('./dict.json', enat.didReceiveDictDataFromServer);
+            enat.setCurrentSessionProgress(0);
+        });
+        window.addEventListener('resize', function () {
+            window.scrollTo(0,0);
+        });
     })();
 
     (function(){

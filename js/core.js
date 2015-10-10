@@ -1,9 +1,10 @@
 window.enat = {
-    conf: {
-        wordsPerSession: 30
+    config: {
+        wordsPerSession: 12
     },
     runtime: {
-        currentProgress: 0
+        currentSessionProgress: 0,
+        currentSessionVocabulary: null
     }
 };
 

@@ -15,7 +15,7 @@
     <script src="../../js/core.js"></script>
 </head>
 
-<body data-metaeant-location="dict">
+<body data-metaeant-location="dict" data-enat-session-state="welcome">
     <header id="enat-dict-header" class="enat-site-grand-header">
         <div class="container">
             <div class="row">
@@ -23,13 +23,68 @@
                     <a class="lnr icon big-icon nav-icon" href="../../" style=""></a>
                 </div>
                 <div id="dict-title" class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
-                    <h1 id="enat-dictionary-title-text" class="text-center"></h1>
+                    <h1 id="enat-dictionary-title-text" class="h3 text-center"></h1>
                 </div>
                 <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
                 </div>
             </div>
         </div>
     </header>
+
+    <section id="enat-session-end" class="enat-session-screen enat-session-end">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center">
+                    <h2>Your session is finished!</h2>
+                    <p>You have reviewed <script>document.write(enat.config.wordsPerSession);</script> words : )</p>
+                    <p>Have a rest or take one more session.</p>
+                    <div class="empty-line"></div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-aligned-to-bottom-container text-center">
+            <a href="/" class="btn btn-sm btn-default btn-pill "><span class="lnr pad-right"></span> Home</a>
+            <!-- <a href="./" class="btn btn-sm btn-success btn-pill "><span class="lnr pad-right"></span> One More</a> -->
+            <button id="btn-restart" type="button" class="btn btn-sm btn-success btn-pill "><span class="lnr pad-right"></span> One More</button>
+        </div>
+    </section>
+
+    <section id="enat-session-session" class="enat-session-screen enat-session-session">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3  text-center">
+                    <div id="session-progress-bar">
+                        <div id="session-progress-bar-progress">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center">
+                    <div class="empty-line"></div>
+                    <h3 class="h1" id="current-phrase">Word</h3>
+                    <div class="empty-line"></div>
+                    <p id="current-explanation">explanation</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-aligned-to-bottom-container text-center">
+            <button id="btn-next" type="button" class="btn btn-lg btn-primary btn-pill ">Next</button>
+        </div>
+    </section>
+
+    <section id="enat-session-welcome" class="enat-session-screen enat-session-welcome">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12  text-center">
+                    <h2>Start a Session</h2>
+                    <p>Each session consists of <script>document.write(enat.config.wordsPerSession);</script> randomly picked phrases in the dictionary.</p>
+                </div>
+            </div>
+        </div>
+        <div class="btn-aligned-to-bottom-container text-center">
+            <button id="btn-start-session" type="button" class="btn btn-lg btn-primary btn-pill ">Start</button>
+        </div>
+    </section>
+
     <script src="../../js/dict.js"></script>
 </body>
 

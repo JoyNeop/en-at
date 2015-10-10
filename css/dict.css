@@ -3,6 +3,7 @@
     text-shadow: rgbx(0, 0, 0, 0.025) 0 1px 1px;
     border-bottom: 1px solid #F0F0F0;
     position: relative;
+    z-index: 999;
 }
 
 .enat-site-grand-header #back-to-home {
@@ -12,6 +13,134 @@
 .enat-site-grand-header #back-to-home .icon {
     position: absolute;
     top: 50%;
+    left: 16px;
+    -webkit-transform: translateY(21%);
+}
+
+.enat-site-grand-header #dict-title h1 {
+    padding: 2.0rem 0 1.5rem;
+    margin: 0;
+}
+
+/* -------------------------------------------------- */
+/* Above all */
+
+body {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.enat-session-screen {
+    /*background: rgba(255, 255, 255, 0) linear-gradient(#FFF, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));*/
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0;
     left: 0;
-    -webkit-transform: translateY(16%);
+    width: 100%;
+    width: 100vw;
+    height: 100%;
+    height: 100vh;
+    padding: 100px 0 0;
+    -webkit-transition: all 350ms ease 10ms;
+    -moz-transition: all 350ms ease 10ms;
+    transition: all 350ms ease 10ms;
+}
+
+body[data-enat-session-state="welcome"] .enat-session-welcome {
+    z-index: 500;
+}
+
+body[data-enat-session-state="welcome"] .enat-session-session {
+    z-index: 400;
+}
+
+body[data-enat-session-state="welcome"] .enat-session-end {
+    z-index: 300;
+}
+
+.btn-aligned-to-bottom-container {
+    position: absolute;
+    bottom: 14rem;
+    left: 0;
+    width: 100%;
+    width: 100vw;
+}
+
+/* -------------------------------------------------- */
+/* Welcome screen */
+
+body[data-enat-session-state="welcome"] .enat-session-welcome {
+    top: 0;
+    opacity: 1;
+}
+
+body[data-enat-session-state="welcome"] .enat-session-session {
+    /*top: 100vh;*/
+    top: 15vh;
+    opacity: 0;
+}
+
+body[data-enat-session-state="welcome"] .enat-session-end {
+    /*top: 100vh;*/
+    top: 15vh;
+    opacity: 0;
+}
+
+/* -------------------------------------------------- */
+/* Session screen */
+
+body[data-enat-session-state="session"] .enat-session-welcome {
+    top: -160vh;
+    opacity: 0;
+
+}
+
+body[data-enat-session-state="session"] .enat-session-session {
+    top: 0vh;
+    opacity: 1;
+}
+
+body[data-enat-session-state="session"] .enat-session-end {
+    /*top: 100vh;*/
+    top: 15vh;
+    opacity: 0;
+}
+
+#session-progress-bar {
+    background: #FAFAFA;
+    border-radius: 100px;
+    height: 22px;
+    overflow: hidden;
+}
+
+#session-progress-bar-progress {
+    background: none;
+    height: 22px;
+    transition: all 300ms ease-out;
+}
+
+#current-phrase a.phrase-anchor {
+    color: #222;
+}
+
+#current-phrase a.phrase-anchor:hover {
+    color: #19F;
+}
+
+/* -------------------------------------------------- */
+/* End screen */
+
+body[data-enat-session-state="end"] .enat-session-welcome {
+    top: -160vh;
+    opacity: 0;
+}
+
+body[data-enat-session-state="end"] .enat-session-session {
+    top: -160vh;
+    opacity: 0;
+}
+
+body[data-enat-session-state="end"] .enat-session-end {
+    top: 0;
+    opacity: 1;
 }
