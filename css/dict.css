@@ -1,1 +1,17 @@
+.enat-site-grand-header {
+    color: #FFF;
+    text-shadow: rgbx(0, 0, 0, 0.025) 0 1px 1px;
+    border-bottom: 1px solid #F0F0F0;
+    position: relative;
+}
 
+.enat-site-grand-header #back-to-home {
+    position: relative;
+}
+
+.enat-site-grand-header #back-to-home .icon {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    -webkit-transform: translateY(16%);
+}
