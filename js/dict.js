@@ -71,6 +71,12 @@ enat.setPhrase = function (ph) {
     document.getElementById('current-explanation').innerHTML = currentPhraseItem.e;
 };
 
+enat.initNextButton = function (MSG) {
+    document.getElementById('btn-next').innerHTML = MSG.text;
+    document.getElementById('btn-next').classList.remove(MSG.removeClass);
+    document.getElementById('btn-next').classList.add(MSG.addClass);
+};
+
 enat.userDidClickNextButton = function () {
     var currentSessionProgress = enat.getCurrentSessionProgress();
     if (currentSessionProgress < enat.config.wordsPerSession-1) {
@@ -78,10 +84,12 @@ enat.userDidClickNextButton = function () {
         enat.setPhrase(currentSessionProgress+1);
         enat.setCurrentSessionProgress(currentSessionProgress+1);
         if (currentSessionProgress == enat.config.wordsPerSession-2) {
-            document.getElementById('btn-next').innerHTML = 'Finish';
-            document.getElementById('btn-next').classList.remove('btn-primary');
-            document.getElementById('btn-next').classList.add('btn-success');
-        }
+            enat.initNextButton({
+                text: 'Finish',
+                removeClass: 'btn-primary',
+                addClass: 'btn-success'
+            });
+        };
     } else if (currentSessionProgress == enat.config.wordsPerSession-1) {
         enat.userDidFinishSession();
     };
@@ -117,9 +125,14 @@ enat.userDidFinishSession = function () {
         document.getElementById('btn-start-session').addEventListener('click', enat.userDidClickStartSessionButton);
         document.getElementById('btn-next').addEventListener('click', enat.userDidClickNextButton);
         document.getElementById('btn-restart').addEventListener('click', function () {
-            document.body.setAttribute('data-enat-session-state', 'welcome');
+            enat.initNextButton({
+                text: 'Finish',
+                removeClass: 'btn-primary',
+                addClass: 'btn-success'
+            });
             enat.request('./dict.json', enat.didReceiveDictDataFromServer);
             enat.setCurrentSessionProgress(0);
+            document.body.setAttribute('data-enat-session-state', 'welcome');
         });
         window.addEventListener('resize', function () {
             window.scrollTo(0,0);
