@@ -5,7 +5,7 @@
 }
 
 a {
-    color: #08C;
+    color: #19F;
 }
 
 a, a:hover {
@@ -13,7 +13,7 @@ a, a:hover {
 }
 
 html, body {
-    font-family: 'Hind', 'Segoe UI', 'Helvetica Neue', Helvetica, 'Arial', 'Hiraigno Sans GB', 'Lantinghei SC', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
+    font-family: 'Myriad Pro', Seravek, 'Hind', 'Segoe UI', 'Helvetica Neue', Helvetica, 'Arial', 'Hiraigno Sans GB', 'Lantinghei SC', 'Source Han Sans SC', 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
     font-size: 10px;
     padding: 0;
     margin: 0;
@@ -23,4 +23,8 @@ html, body {
 
 .font-weight-light {
     font-weight: 300;
+}
+
+.opacity-zero {
+    opacity: 0;
 }

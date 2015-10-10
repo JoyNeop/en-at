@@ -2,6 +2,8 @@
     text-shadow: rgba(0, 0, 0, 0.0983) 0 1px 0;
     background: #19F;
     background-image: -webkit-linear-gradient(280deg, #1C74F5, #1AC6FD);
+    background-image: linear-gradient(#1C74F5, #1AC6FD);
+    background-image: linear-gradient(170deg, #1C74F5, #1AC6FD);
     padding: 60px 0 40px;
 }
 
@@ -35,32 +37,51 @@
     box-shadow: rgba(0, 0, 0, 0.094) 0 1px 1px;
     overflow: hidden;
     position: relative;
+    top: 0;
     -webkit-transition: all 300ms ease;
     -moz-transition: all 300ms ease;
     transition: all 300ms ease;
 }
 
-.enat-dict-entry-card:hover {
-    /*color: #000;*/
-    /*background: #FFF;*/
+.enat-dict-entry-card[data-enat-dict-disabled="false"] {
+}
+
+.enat-dict-entry-card[data-enat-dict-disabled="true"] {
+    opacity: 0.33;
+}
+
+.enat-dict-entry-card[data-enat-dict-disabled="true"] a {
+    cursor: default;
+}
+
+.enat-dict-entry-card[data-enat-dict-disabled="false"]:hover {
     box-shadow: rgba(0, 0, 0, 0.105) 0 5px 5px;
     top: -5px;
 }
 
-.enat-dict-entry-card-anchor {
+a.enat-dict-entry-card-anchor {
     text-decoration: none;
     display: block;
 }
 
-.enat-dict-entry-card-anchor *, .enat-dict-entry-card-anchor:hover * {
+a.enat-dict-entry-card-anchor *, a.enat-dict-entry-card-anchor:hover * {
     text-decoration: none !important;
 }
 
 .enat-dict-entry-card-vertical-area-1 {
+    text-align: center;
     background-size: cover;
     background-position: center center;
     background-attachment: scroll;
     height: 140px;
+    padding-top: 60px;
+}
+
+.enat-dict-entry-card[data-enat-dict-disabled="true"] a .enat-dict-entry-card-vertical-area-1::before {
+    content: "Not Ready Yet";
+    font-size: 2.0rem;
+    font-weight: 300;
+    color: #FFF;
 }
 
 .enat-dict-entry-card-vertical-area-2 {
@@ -69,6 +90,7 @@
 
 .enat-dict-entry-card-vertical-area-2 h4 {
     font-size: 2.2rem;
+    font-weight: 300;
     color: #333;
     text-decoration: none !important;
     margin: 0;
@@ -94,11 +116,15 @@
     padding: 40px 0 25px;
 }
 
+.enat-site-grand-header {
+    color: #19F;
+}
+
 .enat-site-grand-footer .sponsor-logo {
     display: inline-block;
     height: 1.6rem;
     -webkit-transform: translateY(-2px);
     -moz-transform: translateY(-2px);
     transform: translateY(-2px);
-    margin: 0 0 0 8px;
+    margin: 0 0 0 4px;
 }

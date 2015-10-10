@@ -17,7 +17,7 @@ var fs = require('fs');
     var cardTemplate = fs.readFileSync('./template/index-dict-card-template.html').toString().trim().replace(/\n/g, '');
     var js = fs.readFileSync('./js/index.js').toString().replace(/__CARD_TEMPLATE__/g, cardTemplate);
 
-    fs.writeFileSync('./js/index.min.js', js);
+    fs.writeFileSync('./js/index.prod.js', js);
 })();
 
 // Done

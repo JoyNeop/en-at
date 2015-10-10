@@ -1,3 +1,15 @@
-[
-    { "t": "en banc", }
-]
+{
+    "contributors": [
+        "Joy Neop",
+        "Tianyu Fang",
+        "Linghein Ho",
+        "Lion Yang"
+    ],
+    "license": {
+        "name": "CC BY-SA 4.0",
+        "url": "http://creativecommons.org/licenses/by-sa/4.0/"
+    },
+    "list": [
+        { "t": "en banc", }
+    ]
+}
