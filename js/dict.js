@@ -126,9 +126,9 @@ enat.userDidFinishSession = function () {
         document.getElementById('btn-next').addEventListener('click', enat.userDidClickNextButton);
         document.getElementById('btn-restart').addEventListener('click', function () {
             enat.initNextButton({
-                text: 'Finish',
-                removeClass: 'btn-primary',
-                addClass: 'btn-success'
+                text: 'Next',
+                removeClass: 'btn-success',
+                addClass: 'btn-primary'
             });
             enat.request('./dict.json', enat.didReceiveDictDataFromServer);
             enat.setCurrentSessionProgress(0);
