@@ -116,6 +116,10 @@ a.enat-dict-entry-card-anchor *, a.enat-dict-entry-card-anchor:hover * {
     padding: 40px 0 25px;
 }
 
+.enat-site-grand-footer p {
+    font-size: 1.4rem;
+}
+
 .enat-site-grand-header {
     color: #19F;
 }
