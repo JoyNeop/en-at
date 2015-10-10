@@ -34,7 +34,6 @@ enat.randomlySelectSomeElementsFromArray = function (arr) {
         })) {
             tmp.push(i);
             res.push(arr[i]);
-            console.log(arr[i].t);
         };
     };
     return res;
