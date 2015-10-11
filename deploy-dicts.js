@@ -5,7 +5,7 @@ var fs = require('fs');
 (function(){
     var template = fs.readFileSync('./template/dict-interface-template.html').toString();
     var listOfDicts = [
-        'test'
+        'philosophy'
     ];
     listOfDicts.forEach(function (dir) {
         fs.writeFileSync('./dict/' + dir + '/index.html', template);

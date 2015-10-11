@@ -24,8 +24,6 @@ enat.getCurrentDictInfoFromUrl = function () {
 enat.randomlySelectSomeElementsFromArray = function (arr) {
     var tmp = [];
     var res = [];
-    // var arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16];
-    // var total = 10;
     var total = enat.config.wordsPerSession;
     while (tmp.length < total) {
         var i = Math.floor(Math.random()*total);

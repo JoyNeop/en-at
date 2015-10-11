@@ -1,7 +1,6 @@
 .enat-site-grand-header {
     color: #FFF;
     text-shadow: rgbx(0, 0, 0, 0.025) 0 1px 1px;
-    border-bottom: 1px solid #F0F0F0;
     position: relative;
     z-index: 999;
 }
