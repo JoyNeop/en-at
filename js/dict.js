@@ -107,6 +107,7 @@ enat.userDidFinishSession = function () {
         document.getElementById('enat-dict-header').style.backgroundColor = enat.getCurrentDictInfoFromUrl().color;
         document.getElementById('session-progress-bar-progress').style.backgroundColor = enat.getCurrentDictInfoFromUrl().color;
         document.getElementById('enat-dictionary-title-text').innerHTML = enat.getCurrentDictInfoFromUrl().title;
+        document.title = enat.getCurrentDictInfoFromUrl().title + ' — English A.T.';
         enat.request('./dict.json', enat.didReceiveDictDataFromServer);
         enat.setCurrentSessionProgress(0);
 
@@ -135,13 +136,5 @@ enat.userDidFinishSession = function () {
         window.addEventListener('resize', function () {
             window.scrollTo(0,0);
         });
-    })();
-
-    (function(){
-        // Initialize event listeners
-    })();
-
-    (function(){
-        // Initialize event listeners
     })();
 })();
