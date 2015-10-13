@@ -118,7 +118,7 @@ enat.userDidFinishSession = function () {
             };
         };
 
-        if (window.innerHeight < 466) {
+        if (window.innerHeight < 450 || navigator.userAgent.toLowerCase().indexOf('micromessenger') != -1 || navigator.userAgent.toLowerCase().indexOf('iphone') != -1 ) {
             document.body.setAttribute('data-device-screen-height-mode', 'low');
         };
     };
