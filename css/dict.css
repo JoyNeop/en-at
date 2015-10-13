@@ -65,6 +65,10 @@ body[data-enat-session-state="welcome"] .enat-session-end {
     width: 100vw;
 }
 
+body[data-device-screen-height-mode="low"] .btn-aligned-to-bottom-container {
+    bottom: 7.5rem;
+}
+
 /* -------------------------------------------------- */
 /* Welcome screen */
 

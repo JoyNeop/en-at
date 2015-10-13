@@ -115,7 +115,11 @@ enat.userDidFinishSession = function () {
             // Assuming it is iOS or another mobile device which may have bug for fixed viewport height
             document.ontouchmove = function (e) {
                 e.preventDefault();
-            }
+            };
+        };
+
+        if (window.innerHeight < 466) {
+            document.body.setAttribute('data-device-screen-height-mode', 'low');
         };
     };
 
