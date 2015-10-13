@@ -5,7 +5,8 @@ enat.dictNotFound = function () {
 enat.getCurrentDictInfoFromUrl = function () {
     var tmp;
     var res;
-    var id = window.location.href.match(/english-at\.net\/dict\/(\w+)\//);
+    var regexForUrl = (window.location.port == '') ? /english-at\.net\/dict\/(\w+)\// : /\/dict\/(\w+)\//;
+    var id = window.location.href.match(regexForUrl);
     if (id instanceof Array) {
         if (id.length > 1) {
             tmp = id[1];
