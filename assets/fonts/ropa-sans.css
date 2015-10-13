@@ -24,5 +24,5 @@
 @import url("//hello.myfonts.net/count/2f69d4");
 
   
-@font-face {font-family: 'RopaSansPTT-Regular';src: url('/assets/fonts/ropa-sans-regular.woff') format('woff');}
+@font-face {font-family: 'Ropa Sans';font-weight:300;font-style:normal;src: url('/assets/fonts/ropa-sans-regular.woff') format('woff');}
  
