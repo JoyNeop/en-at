@@ -1,21 +1,21 @@
 /**
  * @license
  * MyFonts Webfont Build ID 3107284, 2015-10-13T13:02:40-0400
- * 
+ *
  * The fonts listed in this notice are subject to the End User License
- * Agreement(s) entered into by the website owner. All other parties are 
+ * Agreement(s) entered into by the website owner. All other parties are
  * explicitly restricted from using the Licensed Webfonts(s).
- * 
+ *
  * You may obtain a valid license at the URLs below.
- * 
+ *
  * Webfont: RopaSansPTT-Regular by lettersoup
  * URL: http://www.myfonts.com/fonts/lettersoup/ropa-sans-pro/ropa-sans/
  * Copyright: &#x00A9; 2014, Copyright by Botio Nikoltchev. All rights reserved.
  * Licensed pageviews: 400,000,020,000
- * 
- * 
+ *
+ *
  * License: http://www.myfonts.com/viewlicense?type=web&buildid=3107284
- * 
+ *
  * © 2015 MyFonts Inc
 */
 
@@ -23,6 +23,5 @@
 /* @import must be at top of file, otherwise CSS will not work */
 @import url("//hello.myfonts.net/count/2f69d4");
 
-  
-@font-face {font-family: 'Ropa Sans';font-weight:300;font-style:normal;src: url('/assets/fonts/ropa-sans-regular.woff') format('woff');}
- 
+
+@font-face {font-family: 'Ropa Sans Pro';font-weight:300;font-style:normal;src: url('/assets/fonts/ropa-sans/ropa-sans-regular.woff') format('woff');}
