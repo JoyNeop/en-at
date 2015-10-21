@@ -1,4 +1,4 @@
-@import url(/assets/fonts/ropa-sans.css);
+@import url(/assets/fonts/solitas.css);
 
 @font-face {
 	font-family: 'Linearicons-Free';
@@ -24,7 +24,7 @@ a, a:hover {
 }
 
 html, body {
-    font-family: 'Ropa Sans Pro', 'SF UI Text', 'SF UI Display', 'Helvetica Neue', 'Segoe UI', Helvetica, 'Arial', 'PingFang SC', '.PingFang SC', 'Hiragino Sans GB', 'Lantinghei SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
+    font-family: 'Solitas', 'SF UI Text', 'SF UI Display', 'Helvetica Neue', 'Segoe UI', Helvetica, 'Arial', 'PingFang SC', '.PingFang SC', 'Hiragino Sans GB', 'Lantinghei SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
     font-size: 10px;
     letter-spacing: 0.01rem;
     padding: 0;
@@ -42,7 +42,7 @@ p {
 }
 
 code.no-monospace {
-    font-family: 'Ropa Sans Pro', 'Myriad Pro', Seravek, 'Hind', 'Segoe UI', 'Helvetica Neue', Helvetica, 'Arial', 'Hiraigno Sans GB', 'Lantinghei SC', 'Source Han Sans SC', 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
+    font-family: 'Solitas', 'SF UI Text', 'SF UI Display', 'Helvetica Neue', 'Segoe UI', Helvetica, 'Arial', 'PingFang SC', '.PingFang SC', 'Hiragino Sans GB', 'Lantinghei SC', 'Source Han Sans SC', 'Source Han Sans CN', 'Source Han Sans', 'Noto Sans CJK SC', 'Noto Sans CJK', 'Heiti SC', 'Microsoft YaHei UI', 'Microsoft YaHei', sans-serif;
 }
 
 /* -------------------------------------------------- */

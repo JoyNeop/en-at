@@ -1,0 +1,28 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3111322, 2015-10-21T02:49:09-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Solitas-NorReg by insigne
+ * URL: http://www.myfonts.com/fonts/insigne/solitas/nor-regular/
+ * Copyright: Copyright 2015 Adobe Systems Incorporated. All rights reserved.
+ * Licensed pageviews: 100,000,000,000
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3111322
+ * 
+ * © 2015 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/2f799a");
+
+  
+@font-face {font-family: 'Solitas';src:url('/assets/fonts/solitas/solitas-regular.woff') format('woff');}
+ 
